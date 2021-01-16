@@ -7,6 +7,7 @@ import store from './Store';
 import GoBack from './GoBack';
 import NoteDetail from './NoteDetail';
 import './App.css';
+import AppContext from './AppContext';
 
 
 
@@ -20,7 +21,16 @@ class App extends Component {
 
 
   render() {
+    const contextValue= {
+      notes: this.state.notes,
+      folders: this.state.folders,
+
+    }
+
+
     return (
+      <AppContext.Provider  value = {contextValue}>
+       
       <div className='App'>
         <div className='App-header'>
 
@@ -32,11 +42,7 @@ class App extends Component {
         <div className='Sidebar'>
           <Route
             exact path='/'
-            render={() =>
-              <Sidebar 
-                  folders={this.state.folders}
-                  />
-            } />
+            component={Sidebar} />
 
           <Route
             path='/folder/:folderId'
@@ -83,6 +89,7 @@ class App extends Component {
           </main>
         </div>
       </div>
+      </AppContext.Provider>
 
     )
   }

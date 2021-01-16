@@ -1,6 +1,8 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
-import './MainPage.css'
+import './MainPage.css';
+import moment from 'moment';
+
 
 
 
@@ -14,7 +16,7 @@ export default function MainPage(props) {
        <div className='Mainpage'>
           {notes.map(note => <div><li key={note.id} className='note'>
                 <h2><Link to={'/note/'+note.id} >{note.name}</Link></h2>
-                <h3>{note.modified}</h3>
+                <h3>Date modified: {moment(note.modified).format('MM YYYY')}</h3>
                 <button className='noteButton'>Remove Note</button>
            </li> </div>)}
        </div>
