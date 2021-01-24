@@ -1,7 +1,9 @@
 import React from 'react';
-import { NavLink } from 'react-router-dom';
+import { NavLink ,Link} from 'react-router-dom';
 import AppContext from './AppContext';
 import './Sidebar.css';
+import FolderError from './FolderError';
+
 
 
 
@@ -10,6 +12,7 @@ export default function Sidebar() {
    return <AppContext.Consumer>{
         value => (
             <div>
+                <FolderError>
                 <ul>
 
                     {value.folders.map(folder => <div className='navSidebar' key={folder.id} ><li >
@@ -18,10 +21,11 @@ export default function Sidebar() {
                     </div>
 
                     )}
-                    <button>
+                    <button className='addFolderButton'><Link to='/addfolder'>
                         + Add Folder
-                        </button>
+                    </Link></button>
                 </ul>
+                </FolderError>
             </div>
 
         )}

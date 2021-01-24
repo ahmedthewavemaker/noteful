@@ -7,6 +7,7 @@
     padding: 0;
     float: right;     
     list-style: none;
+    
 }
 
 .note {
@@ -16,21 +17,43 @@
     height: var(--note-height);
     margin-bottom: 8px;
     max-width: 380px;
-    padding: 8px 0 8px 8px;
+    padding: 0 0 8px 8px;
     position: relative;
     align-items: flex-start;
+    margin-left: 5px;
+    border-radius: 7px;
   }
   
   .noteButton{
-      color:lawngreen;
+    color: yellow;
+    background-color: black;
   }
 
+  .noteAddButton{
+      color: limegreen;
+      background-color: black;
+      margin-top: 20px;
+      margin-left: 10px;
+      height: 50px;
+      font-size:large;
+      font-weight: bold;
+      text-decoration: none;
+      border-radius: 4px;
+      margin-bottom: 20px;
+      
+  }
+  
+  .noteAddButton a{
+      text-decoration: none;
+      color: yellow;
+  }
 
   
 
 a{
     font-size: large;
     font-weight: bold;
+    text-decoration: none;
     
 }
 
@@ -40,6 +63,8 @@ a:hover{
 a:link{
     color: gold;
 }
-a:visited{
-    color: darkgoldenrod;
+
+a:active{
+    color: lightpink;
 }
+

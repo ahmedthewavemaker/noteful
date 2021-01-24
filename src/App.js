@@ -3,11 +3,13 @@ import {Link} from 'react-router-dom';
 import { Route } from 'react-router-dom';
 import Sidebar from './Sidebar';
 import MainPage from './MainPage';
-import store from './Store';
 import GoBack from './GoBack';
 import NoteDetail from './NoteDetail';
 import './App.css';
 import AppContext from './AppContext';
+import AddFolder from './AddFolder';
+import AddNote from './AddNote';
+
 
 
 
@@ -90,6 +92,19 @@ getData =()=> {
             path='/note/:noteId'
             component={GoBack}
             />
+
+            <Route 
+              path='/addfolder'
+              component={AddFolder} />
+
+
+            <Route
+            path='/addnote'
+            component={GoBack}
+            />
+
+              
+
         </div>
 
         <div className='MainPage'>
@@ -105,12 +120,18 @@ getData =()=> {
               component={MainPage}
               />
 
+              
+
             <Route
               path='/note/:noteId'
               component={NoteDetail}
               />
+            
+            <Route
+              path='/addnote'
+              component={AddNote}
+              />
               
-
           </main>
         </div>
       </div>

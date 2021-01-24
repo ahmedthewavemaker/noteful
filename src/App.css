@@ -25,6 +25,13 @@
   padding-left: 16px;
   padding-top: 32px;
   text-shadow: 2px 1px 2px black;
+  
+}
+
+h1{
+  font-size: 29px;
+  font-weight: bold;
+  letter-spacing: 5px;
 }
 
 
@@ -34,3 +41,61 @@
   height: calc(100vh - 120px);
   overflow: auto;
 }
+
+.goBackButton{
+      color: limegreen;
+      background-color: #102541;
+      margin-top: 20px;
+      margin-left: 10px;
+      height: 50px;
+      font-size:large;
+      font-weight: bold;
+      text-decoration: none;
+      border-radius: 4px;
+}
+
+
+
+.submitForm{
+  color: limegreen;
+  background-color: black;
+  margin-top: 20px;
+  margin-left: 10px;
+  height: 50px;
+  font-size:large;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 4px;
+
+}
+
+.headerNoteAdd{
+  font-weight: bold;
+  margin-left: 15px;
+}
+
+.AddNote{
+  margin-bottom: 15px;
+  margin-left: 15px;
+  color: red;
+
+}
+
+.noteName{
+  margin-top: 10px;
+  margin-bottom: 20px;
+  margin-left: 15px;
+}
+
+.contentArea, textarea{
+  width: 300px;
+  height: 150px;
+  margin-bottom: 15px;
+  margin-left: 15px;
+}
+        
+.folderNameSelect{
+  margin-top: 50px;
+  margin-left: 15px;
+}
+      

@@ -8,9 +8,23 @@
  
 }
 
+.addFolderButton{
+    background-color: #010d1e;;
+    margin-top: 20px;
+      margin-left: 10px;
+      height: 50px;
+      font-size:large;
+      font-weight: bold;
+      text-decoration: none;
+      border-radius: 3px;
+}
+
+
+
 a{
     font-size: large;
     font-weight: bold;
+    list-style: none;
 }
 
 a:hover{
@@ -24,6 +38,9 @@ a:visited{
 }
 
 .active{
-    background-color: maroon;
+    background-color: darkgreen;
+}
 
+.addFolderButton a{
+    color: gold;
 }
