@@ -30,6 +30,10 @@ export default function AddNote(props) {
                 context.getData()
                 props.history.push('/')
             })
+            .catch(error => {
+                console.error(error)
+            })
+            
     }
 
 console.log(context.folders)
@@ -72,6 +76,7 @@ console.log(context.folders)
 
 AddNote.propTypes={
     name: PropTypes.string.isRequired,
+    note: PropTypes.any.isRequired,
     match: PropTypes.any,
     history: PropTypes.any
 }

@@ -22,15 +22,18 @@ export default function AddFolder(props) {
            context.getData()
            props.history.push('/')
         })
+        .catch(error => {
+            console.error(error)
+        })
         
     }
 
     return (
         <form onSubmit={onAddFolder}>
-            <label >
+            <label for='name'>
 
             </label>
-            <input name='name' placeholder='Folder Name'/>
+            <input name='name' placeholder='Folder Name' required/>
             <button>Add Folder</button>
         </form>
     )
@@ -39,5 +42,5 @@ export default function AddFolder(props) {
 AddFolder.propTypes={
     name: PropTypes.string.isRequired,
     match: PropTypes.any,
-    history: PropTypes
+    history: PropTypes.any
 }

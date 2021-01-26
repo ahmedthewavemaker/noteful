@@ -15,9 +15,9 @@ export default function Sidebar() {
                 <FolderError>
                 <ul>
 
-                    {value.folders.map(folder => <div className='navSidebar' key={folder.id} ><li >
+                    {value.folders.map(folder => <div className='navSidebar' key={folder.id} ><ul><li >
                         <NavLink to={'/folder/' + folder.id} className='highlightFolder' >{folder.name}</NavLink>
-                    </li>
+                    </li></ul>
                     </div>
 
                     )}

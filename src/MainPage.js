@@ -25,6 +25,10 @@ export default class MainPage extends React.Component {
         .then(()=>{
             this.context.getData()
         })
+        .catch(error => {
+            console.error(error)
+        })
+        
       }
 
       
@@ -40,12 +44,12 @@ export default class MainPage extends React.Component {
     return (
        <div className='Mainpage'>
            <NoteError>
-          {notes.map(note => <div><li key={note.id} className='note'>
+          {notes.map(note => <div><ul><li key={note.id} className='note'>
                 <h2><Link to={'/note/'+note.id} >{note.name}</Link></h2>
                 <p>Date modified: {moment(note.modified).format('MM YYYY')}</p>
                 <button className='noteButton' onClick={e=>this.handleDeleteNote(note.id)}>Remove Note</button>
                
-           </li> </div>)}
+           </li></ul> </div>)}
            <button className='noteAddButton'><Link to='/addnote'>Add Notes</Link></button>
            </NoteError>
        </div>
