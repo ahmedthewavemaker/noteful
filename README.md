@@ -1,5 +1,15 @@
 # Getting Started with Create React App
 
+Noteful app was designed to allow digital note-takers the flexibility to jot down any notes on the spur of the moment, without having to open a Word document, have a notepad that they wont't know where it will get saved, nor use pen and paper. Just open the app and start taking notes. 
+
+App aims to allow a user to add any notes on any subject desired and organize them into folders. 
+
+Users can Add a folder, Add a note, Delete notes, organize content as they wish. 
+
+Technologies used is React, with an emphasis on the Router feature as well as context. 
+
+Goal is to make multiple apps that customize to various subjects, to make note taking ideal for the user/student.
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
